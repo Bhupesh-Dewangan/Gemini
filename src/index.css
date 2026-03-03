@@ -7,27 +7,162 @@
 
 .sidebar img {
   width: 20px;
+  height: 20px;
 }
 
-.search-box img{
+/* Search box icons - base styles */
+.search-box img {
   width: 24px;
+  height: 24px;
   cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+/* Mobile responsive styles */
+@media (max-width: 768px) {
+  /* Sidebar icons */
+  .sidebar img {
+    width: 18px;
+    height: 18px;
+  }
+
+  /* Search box icons - mobile */
+  .search-box img {
+    width: 18px;
+    height: 18px;
+  }
+
+  /* Card adjustments */
+  .card {
+    height: auto;
+    min-height: 120px;
+  }
+
+  /* Card icons */
+  .card img {
+    width: 28px;
+    height: 28px;
+    padding: 4px;
+    bottom: 8px;
+    right: 8px;
+  }
+
+  /* Bottom navigation items */
+  .bottom-items img {
+    width: 18px;
+    height: 18px;
+  }
+
+  /* New chat button icon */
+  .new-chat img {
+    width: 18px;
+    height: 18px;
+  }
+
+  /* Recent chats message icon */
+  .recent-entry img {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+/* Very small screens (below 400px) */
+@media (max-width: 400px) {
+  .search-box img {
+    width: 18px;
+    height: 18px;
+  }
+
+  .search-box {
+    gap: 1px;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  .icons {
+    gap: 2px;
+  }
+
+  .card img {
+    width: 24px;
+    height: 24px;
+    padding: 3px;
+  }
 }
 
 .theme-text {
-  background: -webkit-linear-gradient(90deg, #4285F4, #9B72CB, #D96570);
+  background: -webkit-linear-gradient(90deg, #4285f4, #9b72cb, #d96570);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
+.card {
+  position: relative;
+}
+
 .card img {
   width: 35px;
+  height: 35px;
   padding: 5px;
   position: absolute;
   background-color: white;
   border-radius: 20px;
   bottom: 10px;
   right: 10px;
+  transition: all 0.2s;
+}
 
+/* Line clamp utility for text truncation */
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Smooth scrolling */
+* {
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Better touch targets for mobile */
+@media (max-width: 768px) {
+  .bottom-items,
+  .new-chat,
+  .recent-entry {
+    min-height: 44px;
+  }
+
+  button,
+  [role="button"],
+
+  /* Input field adjustments */
+  input[type="text"] {
+    font-size: 14px;
+    padding: 8px 4px;
+  }
+
+  /* Bottom info text */
+  .bottom-info {
+    font-size: 10px;
+    line-height: 1.4;
+  }
+}
+
+/* Animation for loading dots */
+.animate-bounce {
+  animation: bounce 1.4s infinite;
+}
+
+@keyframes bounce {
+  0%,
+  80%,
+  100% {
+    transform: scale(0);
+  }
+  40% {
+    transform: scale(1);
+  }
 }
