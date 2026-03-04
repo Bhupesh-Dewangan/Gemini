@@ -22,3 +22,23 @@ A modern AI-powered chat application inspired by Google Gemini, built with a sle
 
 **API**
 - Gemini API
+
+
+## ⚙️ Installation
+
+### 1. Clone the repository
+```bash
+git clone https://github.com/username/project.git
+cd project
+```
+
+### 2. Install dependencies
+```bash
+npm install
+```
+
+### 3. Run the project
+```bash
+npm run dev
+```
+
